@@ -8,6 +8,8 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.js" />
+
   <!-- <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com"> -->
 
 
@@ -28,8 +30,76 @@
     ScrollReveal({ reset: false });
   </script>
 
+  <link rel="stylesheet" href="styles.css" />
   <!-- Remove this script once you setup your custom portfolio -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script type="text/javascript">
+    particlesJS("particles-js", { "particles": { "number": { "value": 60, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.25, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 }, "move": { "enable": true, "speed": 3, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }); var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function () { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+  </script>
+  <!-- <style>
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      width: 100%;
+    }
+
+    .exp-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-weight: 300;
+    }
+
+    .exp-item .left {
+      width: 25%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exp-item .right {
+      width: 75%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      border-left: 2px;
+      border-left-style: solid;
+    }
+
+    .exp-item .point {
+      display: flex;
+      flex-direction: row;
+      margin-left: -8px;
+    }
+
+    .circle {
+      border: 2px solid;
+      border-radius: 10px;
+      width: 10px;
+      height: 10px;
+      z-index: 2;
+      background: #fdfdfd;
+      transition: all 0.3s;
+    }
+
+    .exp-item .entry {
+      padding-left: 22px;
+      text-align: justify;
+      padding-bottom: 50px;
+    }
+
+    .point span {
+      font-weight: 700;
+      font-size: 22px;
+      margin-top: -5px;
+      padding-left: 15px;
+    }
+  </style> -->
+  <style>
+  </style>
 </head>
 
 <!-- Follow the HTML instructions to create your stunning portfolio website -->
@@ -38,16 +108,18 @@
   <div id="top"></div>
 
   <!-- **** Hero Section **** -->
-  <div id="hero" class="jumbotron">
-    <div class="container">
-      <h1 class="hero-title" class="load-hidden">
-        Hi, I'm <span class="text-color-main">Abhishek Gunasekar</span>
-        <br />
-        Computer Science Student
-      </h1>
-      <p class="hero-cta" class="load-hidden">
-        <a class="cta-btn cta-btn--hero" href="#about">Learn More</a>
-      </p>
+  <div>
+    <div id="hero" class="jumbotron">
+      <div class="container">
+        <h1 class="hero-title" class="load-hidden">
+          Hi, I'm <span class="text-color-main">Abhishek Gunasekar</span>
+          <br />
+          Computer Science Student
+        </h1>
+        <p class="hero-cta" class="load-hidden">
+          <a class="cta-btn cta-btn--hero" href="#about">Learn More</a>
+        </p>
+      </div>
     </div>
   </div>
   <!-- /END Hero Section -->
@@ -182,7 +254,12 @@
               <i class="devicon-python-plain language"></i>
               <i class="devicon-html5-plain language"></i>
               <i class="devicon-css3-plain language"></i>
+              <i class="devicon-bootstrap-plain language"></i>
               <i class="devicon-javascript-plain language"></i>
+              <i class="devicon-react-original language"></i>
+              <i class="devicon-jquery-plain language"></i>
+
+
             </div>
 
             <br>
@@ -191,7 +268,7 @@
 
             <div class="col-md-12 col-sm-12 col-xs-12">
               <p>Java, C, C++, Python, R, Shell Scripting,
-                x86_64 Assembly, HTML, CSS, JS
+                x86_64 Assembly, HTML, CSS, Bootstrap, JavaScript, ReactJS, jQuery
               </p>
             </div>
 
@@ -208,6 +285,8 @@
               <i class="devicon-vim-plain language"></i>
               <i class="devicon-linux-plain language"></i>
               <i class="devicon-visualstudio-plain language"></i>
+              <i class="devicon-heroku-original language"></i>
+
             </div>
 
             <br>
@@ -215,7 +294,7 @@
             <br>
 
             <div class="col-md-12 col-sm-12 col-xs-12">
-              <p> Git, GitHub, Vim, Unix, VSCode
+              <p> Git, GitHub, Vim, Unix, VSCode, Bash, GDB, Heroku, RESTful API
               </p>
             </div>
 
@@ -249,26 +328,95 @@
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Quote Generator</h3>
+              <h3 class="project-wrapper__text-title">Tesaract</h3>
               <div>
                 <p class="mb-4">
-                  Inspirational Quote Generator built with HTML5, CSS3, JS, and JSON. Utilized the forismatic REST API
-                  and asynchronous functions to fetch data. Deployed using Heroku by creating a NodeJS proxy server.
+                  Developed my own <strong>Unix Shell</strong> from scratch that combines behavior from common shell
+                  programs including
+                  <strong>bash and csh</strong>.
+                  Programmed using C, C++, Lex, and Yacc.
                 </p>
               </div>
-              <a target="_blank" class="cta-btn cta-btn--hero" href="https://agunase.github.io/quote-generator/">
+              <a target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/agunase/shell-project.git">
                 See Live
               </a>
-              <a target="_blank" class="cta-btn text-color-main" href="https://github.com/agunase/quote-generator.git">
+              <a target="_blank" class="cta-btn text-color-main" href="https://github.com/agunase/shell-project.git">
                 Source Code
               </a>
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="project-wrapper__image">
-              <a href="https://agunase.github.io/quote-generator/" target="_blank">
+              <a href="https://github.com/agunase/shell-project.git" target="_blank">
                 <div data-tilt class="thumbnail rounded">
                   <img class="img-fluid" src="./assets/banner1.png" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- /END Project -->
+
+        <!-- Each .row is a project -->
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Cyberbuddies</h3>
+              <div>
+                <p class="mb-4">
+                  <strong></strong>Coded a front-end web app with a search function.
+                  Built using <strong>ReactJS, JSX, HTML5 and CSS</strong>.
+                  Rendered and deployed using <strong>GitHub Pages.</strong>
+                </p>
+              </div>
+              <a target="_blank" class="cta-btn cta-btn--hero" href="https://agunase.github.io/cyberbuddies/">
+                See Live
+              </a>
+              <a target="_blank" class="cta-btn text-color-main" href="https://github.com/agunase/cyberbuddies">
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="project-wrapper__image">
+              <a href="https://agunase.github.io/cyberbuddies/" target="_blank">
+                <div data-tilt class="thumbnail rounded">
+                  <img class="img-fluid" src="./assets/banner2.png" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- /END Project -->
+
+        <!-- Each .row is a project -->
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Wally Webserver</h3>
+              <div>
+                <p class="mb-4">
+                  Programmed a multi-threaded HTTP server which allows any HTTP authenticated client to browse a website
+                  and retrieve
+                  content.
+                  Developed with <strong>C/C++</strong> and implemented concurrency using <strong>fork, threads, and
+                    mutex
+                    locks</strong>.
+                </p>
+              </div>
+              <a target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/agunase/wally-webserver">
+                See Live
+              </a>
+              <a target="_blank" class="cta-btn text-color-main" href="https://github.com/agunase/wally-webserver">
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="project-wrapper__image">
+              <a href="https://github.com/agunase/wally-webserver" target="_blank">
+                <div data-tilt class="thumbnail rounded">
+                  <img class="img-fluid" src="./assets/banner3.png" />
                 </div>
               </a>
             </div>
@@ -285,7 +433,7 @@
                 <p class="mb-4">
                   Simple and Elegant calculator that performs arithmetic operations. UI Built with HTML and CSS and
                   functionality made
-                  with JavaScript. Deployed with GitHub pages.
+                  with <strong>JavaScript</strong>. Deployed with GitHub pages.
                 </p>
               </div>
               <a target="_blank" class="cta-btn cta-btn--hero" href="https://agunase.github.io/calculator/">
@@ -300,7 +448,7 @@
             <div class="project-wrapper__image">
               <a href="https://agunase.github.io/calculator/" target="_blank">
                 <div data-tilt class="thumbnail rounded">
-                  <img class="img-fluid" src="./assets/banner2.png" />
+                  <img class="img-fluid" src="./assets/banner4.png" />
                 </div>
               </a>
             </div>
@@ -312,81 +460,120 @@
         <div class=" row">
           <div class="col-md-6 col-sm-12">
             <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Shell Project</h3>
+              <h3 class="project-wrapper__text-title">Joke Teller</h3>
               <div>
                 <p class="mb-4">
-                  Developed a Shell interpreter from scratch which combines behavior from common shells including bash
-                  and csh. Programmed
-                  using C, C++, Yacc, Lex, and Bash Scripting.
+                  Let the comedian inside you come alive!
+                  This is a <strong>Natural Language Processing </strong>Joke Teller built with HTML5, CSS3, JS, JSON,
+                  and
+                  <strong>text-to-speech
+                    APIs</strong>. Deployed
+                  using GitHub Pages.
                 </p>
               </div>
-              <a target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/agunase/shell-project.git">
+              <a target="_blank" class="cta-btn cta-btn--hero" href="https://agunase.github.io/joketeller/">
                 See Live
               </a>
-              <a target="_blank" class="cta-btn text-color-main" href="https://github.com/agunase/shell-project.git">
+              <a target="_blank" class="cta-btn text-color-main" href="https://github.com/agunase/joketeller">
                 Source Code
               </a>
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="project-wrapper__image">
-              <a href="https://github.com/agunase/shell-project.git" target="_blank">
+              <a href="https://agunase.github.io/joketeller/" target="_blank">
                 <div data-tilt class="thumbnail rounded">
-                  <img class="img-fluid" src="./assets/banner3.png" />
+                  <img class="img-fluid" src="./assets/banner5.png" />
                 </div>
               </a>
             </div>
           </div>
         </div>
-      </div>
-      <!-- /END Project -->
+        <!-- End Project -->
 
-      <br>
-      <br>
-      <br>
-      <br style="margin-bottom: 20px;">
-
-
-      <!-- **** Contact Section **** -->
-      <section id="contact" class="col-lg-12">
-        <div class="container">
-          <h2 class="section-title">
-            Contact Info
-          </h2>
-          <div class="contact-wrapper">
-            <p class="contact-wrapper__text">
-              +1(484)-425-2519 · <span style="text-decoration: underline;"> agunase@purdue.edu</span>
-            </p>
-            <a target="_blank" class="cta-btn cta-btn--resume" href="mailto:agunase@purdue.edu">Contact Me</a>
+        <!-- Each .row is a project -->
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Quote Generator</h3>
+              <div>
+                <p class="mb-4">
+                  Inspirational Quote Generator built with HTML5, CSS3, JS, and JSON. Utilized the <strong> RESTful
+                    API</strong>
+                  and asynchronous functions to fetch data. Deployed using <strong>Heroku</strong> by creating a NodeJS
+                  proxy server.
+                </p>
+              </div>
+              <a target="_blank" class="cta-btn cta-btn--hero" href="https://agunase.github.io/quote-generator/">
+                See Live
+              </a>
+              <a target="_blank" class="cta-btn text-color-main" href="https://github.com/agunase/quote-generator.git">
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="project-wrapper__image">
+              <a href="https://agunase.github.io/quote-generator/" target="_blank">
+                <div data-tilt class="thumbnail rounded">
+                  <img class="img-fluid" src="./assets/banner6.png" />
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-      </section>
-      <!-- /END Contact Section -->
+        <!-- /END Project -->
 
-      <!-- **** Footer Section **** -->
-      <footer class="footer navbar-static-bottom">
-        <div class="container">
-          <a href="#top" class="back-to-top">
-            <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-          </a>
-          <div class="social-links">
-            <a href="https://twitter.com/gabhi2001" target="_blank">
-              <i class="fa fa-twitter fa-inverse"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/abhiguna" target="_blank">
-              <i class="fa fa-linkedin fa-inverse"></i>
-            </a>
-            <a href="https://github.com/agunase" target="_blank">
-              <i class="fa fa-github fa-inverse"></i>
-            </a>
+        <!-- /END Project Section  -->
+
+        <br>
+        <br>
+        <br>
+        <br style="margin-bottom: 20px;">
+
+
+        <!-- **** Contact Section **** -->
+        <section id="contact" class="col-lg-12 col-sm-12">
+          <div class="container">
+            <h2 class="section-title">
+              Contact Info
+            </h2>
+            <div class="contact-wrapper">
+              <p class="contact-wrapper__text">
+                +1(484)-425-2519 · <span style="text-decoration: underline;"> agunase@purdue.edu</span>
+              </p>
+              <a target="_blank" class="cta-btn cta-btn--resume" href="mailto:agunase@purdue.edu">Contact Me</a>
+            </div>
           </div>
+        </section>
+        <!-- /END Contact Section -->
 
-          <hr />
+        <!-- **** Footer Section **** -->
+        <footer class="footer navbar-static-bottom">
+          <div class="container">
+            <a href="#top" class="back-to-top">
+              <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+            </a>
+            <div class="social-links">
+              <a href="https://twitter.com/gabhi2001" target="_blank">
+                <i class="fa fa-twitter fa-inverse"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/abhiguna" target="_blank">
+                <i class="fa fa-linkedin fa-inverse"></i>
+              </a>
+              <a href="https://github.com/agunase" target="_blank">
+                <i class="fa fa-github fa-inverse"></i>
+              </a>
+            </div>
+
+            <hr />
 
 
-        </div>
-      </footer>
-      <!-- /END Footer Section -->
+          </div>
+        </footer>
+        <!-- /END Footer Section -->
+        <!-- <script src="particles.js-master/particles.js"></script>
+      <script src="particles.js-master/demo/js/app.js"></script> -->
 </body>
 
 </html>
